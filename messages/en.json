@@ -1,0 +1,12 @@
+{
+  "LoginPage": {
+    "hi_there": "Hi there",
+    "enter_your_account": "Enter your account",
+    "email": "Email",
+    "enter_your_email": "Enter your email",
+    "password": "Password",
+    "enter_your_password": "Enter your password",
+    "forgot_password": "Forgot password?",
+    "enter": "Enter"
+  }
+}

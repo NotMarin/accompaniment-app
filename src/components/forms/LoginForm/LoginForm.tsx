@@ -10,8 +10,11 @@ import CustomFormField, { FormFieldType } from "../components/CustomFormField/Cu
 import Link from "next/link";
 import { Lock, Mail } from "lucide-react";
 import { LoginValidation } from "@/lib/validation";
+import { useTranslations } from "next-intl";
 
 const LoginForm = () => {
+  const t = useTranslations("LoginPage");
+
   const form = useForm<z.infer<typeof LoginValidation>>({
     resolver: zodResolver(LoginValidation),
     defaultValues: {
@@ -27,23 +30,23 @@ const LoginForm = () => {
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="flex-1 space-y-2">
         <section className="mb-4">
-          <h1 className="text-2xl">Hi there</h1>
-          <p className="text-muted-foreground text-sm">Enter to your account.</p>
+          <h1 className="text-2xl">{t("hi_there")}</h1>
+          <p className="text-muted-foreground text-sm">{t("enter_your_account")}</p>
         </section>
         <CustomFormField
           fieldType={FormFieldType.INPUT}
           control={form.control}
           name="email"
-          label="Email"
-          placeholder="Enter your email"
+          label={t("email")}
+          placeholder={t("enter_your_email")}
           icon={<Mail size={18} />}
         />
         <CustomFormField
           fieldType={FormFieldType.PASSWORD}
           control={form.control}
           name="password"
-          label="Password"
-          placeholder="Enter your password"
+          label={t("password")}
+          placeholder={t("enter_your_password")}
           icon={<Lock size={18} />}
         />
         <div className="flex items-center justify-end gap-2">
@@ -51,10 +54,10 @@ const LoginForm = () => {
             href=""
             className="text-muted-foreground hover:text-foreground cursor-pointer text-sm hover:underline"
           >
-            Forgot password?
+            {t("forgot_password")}
           </Link>
           <Button type="submit" className="w-[100px] cursor-pointer">
-            Enter
+            {t("enter")}
           </Button>
         </div>
       </form>

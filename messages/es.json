@@ -1,0 +1,12 @@
+{
+  "LoginPage": {
+    "hi_there": "Hola",
+    "enter_your_account": "Ingresa a tu cuenta",
+    "email": "Correo electrónico",
+    "enter_your_email": "Ingresa tu correo electrónico",
+    "password": "Contraseña",
+    "enter_your_password": "Ingresa tu contraseña",
+    "forgot_password": "¿Olvidaste tu contraseña?",
+    "enter": "Entrar"
+  }
+}
