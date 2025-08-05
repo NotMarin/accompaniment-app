@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Eye, EyeOff } from "lucide-react";
-import React, { useState } from "react";
+import { useState } from "react";
 import { Control } from "react-hook-form";
 
 export enum FormFieldType {
